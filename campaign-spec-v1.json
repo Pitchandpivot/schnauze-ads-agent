@@ -1,127 +1,833 @@
 {
-  "version": "1.0",
-  "created": "2026-09-06",
-  "phase": "test 16.-30.09.2026",
-  "status_on_create": "PAUSED",
-  "assets_base": "https://raw.githubusercontent.com/Pitchandpivot/schnauze-ads-agent/main/creatives/v1/",
-  "site": "https://schnauze.digital",
-  "utm_defaults": {"utm_source": "{platform}", "utm_medium": "{medium}", "utm_campaign": "{campaign_id}", "utm_content": "{adset_or_adgroup}-{creative}", "utm_term": "{keyword}"},
-
-  "meta": {
-    "ad_account": "act_1338835544657974",
-    "page_id": "112566095062474",
+ "version": "2.0",
+ "created": "2026-09-06",
+ "phase": "test 16.-30.09.2026",
+ "status_on_create": "PAUSED",
+ "assets_base": "https://raw.githubusercontent.com/Pitchandpivot/schnauze-ads-agent/main/creatives/v1/",
+ "site": "https://schnauze.digital",
+ "utm_defaults": {
+  "utm_source": "{platform}",
+  "utm_medium": "{medium}",
+  "utm_campaign": "{campaign_id}",
+  "utm_content": "{adset_or_adgroup}-{creative}",
+  "utm_term": "{keyword}"
+ },
+ "meta": {
+  "ad_account": "act_1338835544657974",
+  "page_id": "112566095062474",
+  "pixel_id": "744063475370018",
+  "geo": [
+   "DE",
+   "AT",
+   "CH"
+  ],
+  "locales": [
+   "de_DE"
+  ],
+  "custom_audiences_to_create": [
+   {
+    "name": "Website 30 Tage",
+    "type": "WEBSITE",
     "pixel_id": "744063475370018",
-    "geo": ["DE", "AT", "CH"],
-    "locales": ["de_DE"],
-    "custom_audiences_to_create": [
-      {"name": "Website 30 Tage", "type": "WEBSITE", "pixel_id": "744063475370018", "retention_days": 30, "rule": "all_visitors"},
-      {"name": "Check abgeschlossen 90 Tage", "type": "WEBSITE", "pixel_id": "744063475370018", "retention_days": 90, "rule": "event=Lead"},
-      {"name": "Käuferinnen 180 Tage", "type": "WEBSITE", "pixel_id": "744063475370018", "retention_days": 180, "rule": "event=Purchase"},
-      {"name": "Seite Interaktion 365", "type": "ENGAGEMENT_PAGE", "page_id": "112566095062474", "retention_days": 365}
-    ],
-    "campaigns": [
-      {
-        "id": "M1", "name": "M1 · Gratis-Check · Leads · DACH", "objective": "OUTCOME_LEADS", "buying_type": "AUCTION",
-        "daily_budget_eur": 17, "budget_level": "campaign", "bid_strategy": "LOWEST_COST_WITHOUT_CAP",
-        "special_ad_categories": [],
-        "adsets": [
-          {
-            "id": "M1.1", "name": "Hundetrainerinnen 22-55",
-            "optimization_goal": "OFFSITE_CONVERSIONS", "pixel_event": "Lead", "billing_event": "IMPRESSIONS",
-            "targeting": {"age_min": 22, "age_max": 55, "genders": [2], "interests": ["Hundetraining", "Hundeschule", "Hundeerziehung", "Hundetrainer"], "flexible_and": ["Kleinunternehmen", "Selbstständigkeit", "Unternehmertum"]},
-            "placements": "advantage_plus",
-            "ads": [
-              {"creative": "K1a_hook_gesicht", "primary_text": "A", "headline": "Gratis-Betriebs-Check in 5 Minuten", "description": "Kostenlos · kein Abo · Ergebnis per Mail", "cta": "LEARN_MORE", "url": "/betriebs-check"},
-              {"creative": "K2_check_3d", "primary_text": "B", "headline": "Woran hakt es bei dir wirklich?", "description": "55 Fragen · 5 Minuten · 0 €", "cta": "LEARN_MORE", "url": "/betriebs-check"},
-              {"creative": "K7_lisa", "primary_text": "A", "headline": "Preise um 55 % erhöht – mehr Kunden", "description": "Lisa B., Hundetrainerin, Salzburg", "cta": "LEARN_MORE", "url": "/betriebs-check"},
-              {"creative": "K3_problem_kacheln", "primary_text": "B", "headline": "Kennst du 2 davon?", "description": "Dann liegt es nicht an deinem Können.", "cta": "LEARN_MORE", "url": "/betriebs-check"}
-            ]
-          },
-          {
-            "id": "M1.2", "name": "Tierphysio · Tierheilpraxis 28-55",
-            "optimization_goal": "OFFSITE_CONVERSIONS", "pixel_event": "Lead", "billing_event": "IMPRESSIONS",
-            "targeting": {"age_min": 28, "age_max": 55, "genders": [2], "interests": ["Tierphysiotherapie", "Tierheilpraktiker", "Osteopathie", "Physiotherapie"], "flexible_and": ["Hunde", "Pferde"]},
-            "placements": "advantage_plus",
-            "ads": [
-              {"creative": "K7_nadine", "primary_text": "C", "headline": "6 von 10 Neukunden über Empfehlung", "description": "Nadine F., Tierphysio, Frankfurt", "cta": "LEARN_MORE", "url": "/betriebs-check"},
-              {"creative": "K2_check_3d", "primary_text": "C", "headline": "Woran hakt es bei dir wirklich?", "description": "55 Fragen · 5 Minuten · 0 €", "cta": "LEARN_MORE", "url": "/betriebs-check"},
-              {"creative": "K3_problem_kacheln", "primary_text": "B", "headline": "Kennst du 2 davon?", "description": "Für selbständige Tierprofis", "cta": "LEARN_MORE", "url": "/betriebs-check"}
-            ]
-          },
-          {
-            "id": "M1.3", "name": "Hundefrauen breit 22-55 (Gründerinnen)",
-            "optimization_goal": "OFFSITE_CONVERSIONS", "pixel_event": "Lead", "billing_event": "IMPRESSIONS",
-            "targeting": {"age_min": 22, "age_max": 55, "genders": [2], "interests": ["Hunde", "Welpen", "Hundesport", "Agility", "Hundetraining"], "advantage_audience": true},
-            "placements": "advantage_plus",
-            "ads": [
-              {"creative": "K1a_hook_gesicht", "primary_text": "D", "headline": "Vom Hundemenschen zur Hundetrainerin", "description": "Was dir niemand über den Businessteil sagt", "cta": "LEARN_MORE", "url": "/betriebs-check"},
-              {"creative": "K1b_hook_akademie", "primary_text": "D", "headline": "13 Jahre Akademie geleitet", "description": "Das hat dir niemand beigebracht", "cta": "LEARN_MORE", "url": "/betriebs-check"},
-              {"creative": "K4_99tipps_1euro", "primary_text": "E", "headline": "99 Tipps für 1 €. Kein Tippfehler.", "description": "PDF · sofort nach der Zahlung", "cta": "SHOP_NOW", "url": "/kurse/quickstart"}
-            ]
-          }
-        ]
+    "retention_days": 30,
+    "rule": "all_visitors"
+   },
+   {
+    "name": "Check abgeschlossen 90 Tage",
+    "type": "WEBSITE",
+    "pixel_id": "744063475370018",
+    "retention_days": 90,
+    "rule": "event=Lead"
+   },
+   {
+    "name": "Käuferinnen 180 Tage",
+    "type": "WEBSITE",
+    "pixel_id": "744063475370018",
+    "retention_days": 180,
+    "rule": "event=Purchase"
+   },
+   {
+    "name": "Seite Interaktion 365",
+    "type": "ENGAGEMENT_PAGE",
+    "page_id": "112566095062474",
+    "retention_days": 365
+   },
+   {
+    "name": "Petfluencer-Seite 30 Tage",
+    "type": "WEBSITE",
+    "pixel_id": "744063475370018",
+    "retention_days": 30,
+    "rule": "url=petfluencer"
+   },
+   {
+    "name": "Storytelling-Seite 30 Tage",
+    "type": "WEBSITE",
+    "pixel_id": "744063475370018",
+    "retention_days": 30,
+    "rule": "url=storytelling"
+   }
+  ],
+  "campaigns": [
+   {
+    "id": "M1",
+    "name": "M1 · Gratis-Check · Leads · DACH",
+    "objective": "OUTCOME_LEADS",
+    "buying_type": "AUCTION",
+    "daily_budget_eur": 12,
+    "budget_level": "campaign",
+    "bid_strategy": "LOWEST_COST_WITHOUT_CAP",
+    "special_ad_categories": [],
+    "adsets": [
+     {
+      "id": "M1.1",
+      "name": "Hundetrainerinnen 22-55",
+      "optimization_goal": "OFFSITE_CONVERSIONS",
+      "pixel_event": "Lead",
+      "billing_event": "IMPRESSIONS",
+      "targeting": {
+       "age_min": 22,
+       "age_max": 55,
+       "genders": [
+        2
+       ],
+       "interests": [
+        "Hundetraining",
+        "Hundeschule",
+        "Hundeerziehung",
+        "Hundetrainer"
+       ],
+       "flexible_and": [
+        "Kleinunternehmen",
+        "Selbstständigkeit",
+        "Unternehmertum"
+       ]
       },
-      {
-        "id": "M3", "name": "M3 · Akademie-Aktion · warm · bis 30.09.", "objective": "OUTCOME_SALES",
-        "daily_budget_eur": 8, "budget_level": "campaign", "bid_strategy": "LOWEST_COST_WITHOUT_CAP", "end_time": "2026-09-30T23:59:00+02:00",
-        "adsets": [
-          {
-            "id": "M3.1", "name": "Warm: Website + Check + Seite",
-            "optimization_goal": "OFFSITE_CONVERSIONS", "pixel_event": "Purchase", "billing_event": "IMPRESSIONS",
-            "targeting": {"age_min": 22, "age_max": 60, "custom_audiences": ["Website 30 Tage", "Check abgeschlossen 90 Tage", "Seite Interaktion 365"], "exclude_custom_audiences": ["Käuferinnen 180 Tage"]},
-            "placements": "advantage_plus",
-            "ads": [
-              {"creative": "K6_akademie_aktion", "primary_text": "F", "headline": "Akademie: 497 € statt 630 € – bis 30.09.", "description": "Alle 8 Kurse + Vorlagen-Vault gratis", "cta": "SHOP_NOW", "url": "/kurse/komplett-akademie"},
-              {"creative": "K1b_hook_akademie", "primary_text": "F", "headline": "Nur noch bis 30. September", "description": "Einmal zahlen, lebenslanger Zugriff", "cta": "SHOP_NOW", "url": "/kurse/komplett-akademie"}
-            ]
-          }
-        ]
-      }
-    ],
-    "primary_texts": {
-      "A": "Du kannst alles mit Hunden – nur nicht, wie du es verkaufst?\n\nZu wenige Anfragen. Preise zu niedrig. Kunden kommen einmal und nie wieder. Du kannst nichts dafür – Hundetrainerin wirst du wegen der Hunde, nicht wegen BWL.\n\nDer kostenlose Betriebs-Check zeigt dir in 5 Minuten, ob es an deinem Angebot, deinem Preis, deiner Sichtbarkeit oder deinem Nachfassen liegt. 55 Fragen, alles Multiple Choice, Ergebnis per Mail mit konkreten nächsten Schritten.\n\nKein Abo, keine Kreditkarte, kein Coach-Blabla. Aus 29 Jahren Praxis in der Tierbranche.\n👉 Jetzt Gratis-Check starten",
-      "B": "5 Minuten. 55 Fragen. Danach weißt du, warum dein Tierbusiness nicht so läuft, wie es könnte – und was zuerst dran ist.\n\nKostenlos, ohne Verkaufsgespräch. Für Hundetrainerinnen, Tierphysios, Tierheilpraktikerinnen & alle, die mit Tieren selbständig sind.",
-      "C": "Tierphysio mit Herz – aber zum Monatsende wird gerechnet?\n\nDu bist fachlich stark. Nur hat dir niemand beigebracht, wie man Preise kalkuliert, Empfehlungen systematisch bekommt und gefunden wird. Das ist kein Talent, das ist Handwerk.\n\nDer kostenlose Betriebs-Check zeigt dir in 5 Minuten, wo dein Hebel liegt. 55 Fragen, Ergebnis per Mail, kein Abo.\n👉 Jetzt kostenlos checken",
-      "D": "Du liebst Hunde. Du bist gut mit ihnen. Und irgendwo im Hinterkopf ist die Frage: Könnte ich davon leben?\n\nDie meisten, die diesen Schritt gehen, scheitern nicht an den Hunden – sondern an Preisen, Anfragen, Verträgen, Sichtbarkeit. Weil es ihnen niemand beibringt.\n\nIch habe 13 Jahre eine Hundeschul-Akademie geleitet und über 4.600 Kurse verkauft. Der kostenlose Betriebs-Check zeigt dir in 5 Minuten, wo du stehst – auch wenn du noch nicht gestartet bist.\n👉 Gratis-Check starten",
-      "E": "99 Tipps für 1 €. Kein Tippfehler.\n\nAus 13 Jahren Akademieleitung und 28 Jahren Marketing: 8 Module, 99 Tipps, 99 Sofort-Aktionen für deine Selbständigkeit mit Hunden & Co. Als PDF, sofort nach der Zahlung.\n\nWarum so günstig? Weil ich will, dass du siehst, wie ich arbeite – bevor du irgendetwas anderes kaufst.",
-      "F": "Nur noch bis 30. September: Die Komplett-Akademie für Tierberufe für 497 € statt 630 €.\n\nAlle 8 Kurse – Fundament, Pricing, E-Mail, Empfehlung, Social Media, KI, Recht, Gefunden werden – plus Vorlagen-Vault mit 62 Vorlagen, Skripten und Prompts gratis dazu. Einmal zahlen, lebenslanger Zugriff.\n\nDu warst schon auf der Seite. Der Preis wartet nicht."
-    },
-    "creative_formats": {"feed": "_1x1.jpg", "feed_tall": "_4x5.jpg", "story_reels": "_9x16.jpg"}
-  },
-
-  "google": {
-    "customer_id": "6217537833", "login_customer_id": "9999416715",
-    "geo": ["Germany", "Austria", "Switzerland"], "language": "German", "network": "search_only",
-    "account_negative_keywords": ["kostenlos", "gratis kurs", "tierarzt", "tierarztpraxis", "tiermedizin", "job", "stellenangebot", "ausbildung zum hundetrainer", "hundetrainer ausbildung", "gehalt", "hundeschule in der nähe", "hundetrainer gesucht", "welpenkurs", "hundeschule preise", "tierphysio termin", "studium", "praktikum", "ihk", "umschulung", "tierheim", "ebay", "kleinanzeigen"],
-    "conversion_actions": {"primary": "Betriebs-Check abgeschlossen (Lead)", "secondary": "Kurskauf (Purchase, Wert)"},
-    "campaigns": [
-      {
-        "id": "G1", "name": "G1 · Gratis-Check · Suche · DACH", "type": "SEARCH", "daily_budget_eur": 15, "bidding": "MAXIMIZE_CONVERSIONS",
-        "ad_groups": [
-          {"id": "G1.1", "name": "Hundeschule mehr Kunden", "url": "/betriebs-check", "match": "PHRASE", "keywords": ["hundeschule mehr kunden", "hundetrainer kunden gewinnen", "hundeschule marketing", "hundeschule auslastung", "hundetrainer selbständig kunden", "werbung hundeschule", "hundeschule bekannt machen", "hundeschule gründen", "hundetrainer selbstständig machen", "mit hunden selbständig machen"]},
-          {"id": "G1.2", "name": "Tierphysio Tierheilpraxis", "url": "/betriebs-check", "match": "PHRASE", "keywords": ["tierphysiotherapie kunden gewinnen", "tierheilpraktiker marketing", "tierphysio praxis auslasten", "tierheilpraktiker mehr kunden", "tierphysiotherapeut selbstständig", "tierphysiotherapie praxis eröffnen"]},
-          {"id": "G1.3", "name": "Tierberuf allgemein", "url": "/betriebs-check", "match": "PHRASE", "keywords": ["tierberuf selbständig", "selbständig mit tieren", "tierbusiness aufbauen", "marketing für tierberufe", "tierberuf mehr umsatz", "selbstständig mit tieren geld verdienen"]}
-        ],
-        "rsa": {
-          "headlines": ["Mehr Kunden für Hundetrainer", "Gratis-Betriebs-Check (5 Min)", "Woran hakt es wirklich?", "Aus 29 Jahren Tierbranche", "Kein Coach-Blabla", "Preise, Marketing, Kunden", "Für selbständige Tierprofis", "Von Ex-Akademie-Leiter", "55 Fragen, klares Ergebnis", "Endlich planbar verkaufen", "Sofort umsetzbar", "Online-Kurse ab 1 €", "Lebenslanger Zugriff", "Ergebnis sofort per Mail", "Kein Abo, keine Kreditkarte"],
-          "headline_overrides": {"G1.2": ["Mehr Kunden für Tierphysios", "Tierheilpraxis auslasten"], "G1.3": ["Selbständig mit Tieren", "Dein Tierbusiness, planbar"]},
-          "descriptions": ["Du kannst alles mit Tieren – nur nicht verkaufen? Der Gratis-Check zeigt in 5 Min, woran es liegt.", "Pricing, Positionierung, Marketing & KI für Hundetrainer, Tierphysios & Co. Kompakt, sofort umsetzbar.", "29 Jahre Tierbranche, 4.600+ verkaufte Kurse. Praxiswissen statt Theorie. Lebenslanger Zugriff.", "Kein Abo, keine Kreditkarte: 55 Fragen, Ergebnis per Mail mit konkreten nächsten Schritten."],
-          "path1": "gratis-check", "path2": "5-minuten"
-        },
-        "sitelinks": [{"text": "Gratis-Check", "url": "/betriebs-check"}, {"text": "Alle Kurse", "url": "/kurse"}, {"text": "Fundament-Kurs 149 €", "url": "/kurse/fundament"}, {"text": "Referenzen", "url": "/referenzen"}],
-        "callouts": ["Lebenslanger Zugriff", "Kein Abo", "DE/AT/CH", "Aus der Praxis", "Sofort starten"],
-        "structured_snippet": {"header": "Kurse", "values": ["Pricing", "Social Media", "E-Mail", "Empfehlung", "KI", "Recht"]}
+      "placements": "advantage_plus",
+      "ads": [
+       {
+        "creative": "K1a_hook_gesicht",
+        "primary_text": "A",
+        "headline": "Gratis-Betriebs-Check in 5 Minuten",
+        "description": "Kostenlos · kein Abo · Ergebnis per Mail",
+        "cta": "LEARN_MORE",
+        "url": "/betriebs-check"
+       },
+       {
+        "creative": "K2_check_3d",
+        "primary_text": "B",
+        "headline": "Woran hakt es bei dir wirklich?",
+        "description": "55 Fragen · 5 Minuten · 0 €",
+        "cta": "LEARN_MORE",
+        "url": "/betriebs-check"
+       },
+       {
+        "creative": "K7_lisa",
+        "primary_text": "A",
+        "headline": "Preise um 55 % erhöht – mehr Kunden",
+        "description": "Lisa B., Hundetrainerin, Salzburg",
+        "cta": "LEARN_MORE",
+        "url": "/betriebs-check"
+       },
+       {
+        "creative": "K3_problem_kacheln",
+        "primary_text": "B",
+        "headline": "Kennst du 2 davon?",
+        "description": "Dann liegt es nicht an deinem Können.",
+        "cta": "LEARN_MORE",
+        "url": "/betriebs-check"
+       }
+      ]
+     },
+     {
+      "id": "M1.2",
+      "name": "Tierphysio · Tierheilpraxis 28-55",
+      "optimization_goal": "OFFSITE_CONVERSIONS",
+      "pixel_event": "Lead",
+      "billing_event": "IMPRESSIONS",
+      "targeting": {
+       "age_min": 28,
+       "age_max": 55,
+       "genders": [
+        2
+       ],
+       "interests": [
+        "Tierphysiotherapie",
+        "Tierheilpraktiker",
+        "Osteopathie",
+        "Physiotherapie"
+       ],
+       "flexible_and": [
+        "Hunde",
+        "Pferde"
+       ]
       },
-      {
-        "id": "G3", "name": "G3 · Akademie-Aktion · Suche · bis 30.09.", "type": "SEARCH", "daily_budget_eur": 8, "bidding": "MAXIMIZE_CONVERSION_VALUE", "end_date": "2026-09-30",
-        "ad_groups": [{"id": "G3.1", "name": "Business-Kurs Tierberufe", "url": "/kurse/komplett-akademie", "match": "PHRASE", "keywords": ["online kurs hundetrainer business", "weiterbildung hundetrainer marketing", "fortbildung selbständige tierberufe", "business kurs tierphysio", "hundetrainer business kurs", "marketing kurs hundeschule"]}],
-        "rsa": {"headlines": ["Komplett-Akademie Tierberufe", "497 € statt 630 € bis 30.09.", "8 Kurse, 1 Preis", "Vorlagen-Vault gratis dazu", "Lebenslanger Zugriff", "Pricing bis KI – alles drin", "Aus 29 Jahren Tierbranche", "Für Hundetrainer & Tierphysios", "Kein Abo, einmal zahlen", "Sofortiger Zugang"], "descriptions": ["Alle 8 Business-Kurse für Tierprofis in einem Paket. Nur bis 30.09.2026 zum Aktionspreis.", "Fundament, Pricing, E-Mail, Empfehlung, Social Media, KI, Recht, Gefunden werden + 62 Vorlagen.", "Einmal zahlen, lebenslanger Zugriff, alle Updates inklusive. Für DE, AT und CH."], "path1": "akademie", "path2": "aktion"}
+      "placements": "advantage_plus",
+      "ads": [
+       {
+        "creative": "K7_nadine",
+        "primary_text": "C",
+        "headline": "6 von 10 Neukunden über Empfehlung",
+        "description": "Nadine F., Tierphysio, Frankfurt",
+        "cta": "LEARN_MORE",
+        "url": "/betriebs-check"
+       },
+       {
+        "creative": "K2_check_3d",
+        "primary_text": "C",
+        "headline": "Woran hakt es bei dir wirklich?",
+        "description": "55 Fragen · 5 Minuten · 0 €",
+        "cta": "LEARN_MORE",
+        "url": "/betriebs-check"
+       },
+       {
+        "creative": "K3_problem_kacheln",
+        "primary_text": "B",
+        "headline": "Kennst du 2 davon?",
+        "description": "Für selbständige Tierprofis",
+        "cta": "LEARN_MORE",
+        "url": "/betriebs-check"
+       }
+      ]
+     },
+     {
+      "id": "M1.3",
+      "name": "Hundefrauen breit 22-55 (Gründerinnen)",
+      "optimization_goal": "OFFSITE_CONVERSIONS",
+      "pixel_event": "Lead",
+      "billing_event": "IMPRESSIONS",
+      "targeting": {
+       "age_min": 22,
+       "age_max": 55,
+       "genders": [
+        2
+       ],
+       "interests": [
+        "Hunde",
+        "Welpen",
+        "Hundesport",
+        "Agility",
+        "Hundetraining"
+       ],
+       "advantage_audience": true
       },
-      {
-        "id": "G4", "name": "G4 · Marke", "type": "SEARCH", "daily_budget_eur": 2, "bidding": "MAXIMIZE_CLICKS", "cpc_ceiling_eur": 0.6,
-        "ad_groups": [{"id": "G4.1", "name": "Marke", "url": "/", "match": "PHRASE", "keywords": ["schnauze digital", "schnauze.digital", "schnauze digital kurse", "michael lederer hundetrainer"]}],
-        "rsa": {"headlines": ["Schnauze.Digital – offiziell", "Online-Kurse für Tierprofis", "Gratis-Betriebs-Check", "Von Michael Lederer", "Pricing, Marketing & KI", "Lebenslanger Zugriff"], "descriptions": ["Die offizielle Seite: 8 Online-Kurse für Hundetrainer, Tierphysios & Co. Kompakt, sofort umsetzbar.", "Starte mit dem kostenlosen 5-Minuten-Check und finde heraus, woran es wirklich hakt."], "path1": "start"}
-      }
+      "placements": "advantage_plus",
+      "ads": [
+       {
+        "creative": "K1a_hook_gesicht",
+        "primary_text": "D",
+        "headline": "Vom Hundemenschen zur Hundetrainerin",
+        "description": "Was dir niemand über den Businessteil sagt",
+        "cta": "LEARN_MORE",
+        "url": "/betriebs-check"
+       },
+       {
+        "creative": "K1b_hook_akademie",
+        "primary_text": "D",
+        "headline": "13 Jahre Akademie geleitet",
+        "description": "Das hat dir niemand beigebracht",
+        "cta": "LEARN_MORE",
+        "url": "/betriebs-check"
+       },
+       {
+        "creative": "K4_99tipps_1euro",
+        "primary_text": "E",
+        "headline": "99 Tipps für 1 €. Kein Tippfehler.",
+        "description": "PDF · sofort nach der Zahlung",
+        "cta": "SHOP_NOW",
+        "url": "/kurse/quickstart"
+       }
+      ]
+     }
     ]
+   },
+   {
+    "id": "M3",
+    "name": "M3 · Akademie-Aktion · warm · bis 30.09.",
+    "objective": "OUTCOME_SALES",
+    "daily_budget_eur": 4,
+    "budget_level": "campaign",
+    "bid_strategy": "LOWEST_COST_WITHOUT_CAP",
+    "end_time": "2026-09-30T23:59:00+02:00",
+    "adsets": [
+     {
+      "id": "M3.1",
+      "name": "Warm: Website + Check + Seite",
+      "optimization_goal": "OFFSITE_CONVERSIONS",
+      "pixel_event": "Purchase",
+      "billing_event": "IMPRESSIONS",
+      "targeting": {
+       "age_min": 22,
+       "age_max": 60,
+       "custom_audiences": [
+        "Website 30 Tage",
+        "Check abgeschlossen 90 Tage",
+        "Seite Interaktion 365"
+       ],
+       "exclude_custom_audiences": [
+        "Käuferinnen 180 Tage"
+       ]
+      },
+      "placements": "advantage_plus",
+      "ads": [
+       {
+        "creative": "K6_akademie_aktion",
+        "primary_text": "F",
+        "headline": "Akademie: 497 € statt 630 € – bis 30.09.",
+        "description": "Alle 8 Kurse + Vorlagen-Vault gratis",
+        "cta": "SHOP_NOW",
+        "url": "/kurse/komplett-akademie"
+       },
+       {
+        "creative": "K1b_hook_akademie",
+        "primary_text": "F",
+        "headline": "Nur noch bis 30. September",
+        "description": "Einmal zahlen, kein Abo",
+        "cta": "SHOP_NOW",
+        "url": "/kurse/komplett-akademie"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "M4",
+    "name": "M4 · Petfluencer-Workbook · Verkauf · DACH",
+    "objective": "OUTCOME_SALES",
+    "buying_type": "AUCTION",
+    "daily_budget_eur": 6,
+    "budget_level": "campaign",
+    "bid_strategy": "LOWEST_COST_WITHOUT_CAP",
+    "special_ad_categories": [],
+    "note": "B2C-Angriff: Halterinnen und Halter, die aus Hund/Katze eine Marke machen wollen. Erster Verkaufstest kalt; Zielgruppe ist groß, deshalb Interessen-UND. Erfolgskriterium Testphase: CPC ≤ 0,60 €, Landingpage-CTR ≥ 1,5 %, ≥ 1 Kauf je 60 € Ausgabe.",
+    "adsets": [
+     {
+      "id": "M4.1",
+      "name": "Petfluencer-Interesse 18-45 · Hund & Katze",
+      "optimization_goal": "OFFSITE_CONVERSIONS",
+      "pixel_event": "Purchase",
+      "billing_event": "IMPRESSIONS",
+      "targeting": {
+       "age_min": 18,
+       "age_max": 45,
+       "interests": [
+        "Hunde",
+        "Katzen",
+        "Haustiere"
+       ],
+       "flexible_and": [
+        "Instagram",
+        "TikTok",
+        "Influencer-Marketing",
+        "Content-Erstellung"
+       ],
+       "exclude_custom_audiences": [
+        "Käuferinnen 180 Tage"
+       ]
+      },
+      "placements": "advantage_plus",
+      "ads": [
+       {
+        "creative": "K8a_petfluencer_hook",
+        "primary_text": "G",
+        "headline": "Erfolgreich Petfluencer werden",
+        "description": "19 Module · 40 Porträts · 100 Marken · 97 €",
+        "cta": "LEARN_MORE",
+        "url": "/kurs/petfluencer-workbook"
+       },
+       {
+        "creative": "K8b_petfluencer_mythen",
+        "primary_text": "H",
+        "headline": "Vom ersten Post zum ersten Vertrag",
+        "description": "Das Workbook · 346 Seiten als Kurs · 97 €",
+        "cta": "LEARN_MORE",
+        "url": "/kurs/petfluencer-workbook"
+       },
+       {
+        "creative": "K8c_petfluencer_wert",
+        "primary_text": "I",
+        "headline": "Was ist ein Post mit deinem Hund wert?",
+        "description": "Preisformel, Media-Kit, 7 Einnahmequellen",
+        "cta": "SHOP_NOW",
+        "url": "/kurs/petfluencer-workbook"
+       }
+      ]
+     },
+     {
+      "id": "M4.2",
+      "name": "Warm: Petfluencer-Seite 30 Tage",
+      "optimization_goal": "OFFSITE_CONVERSIONS",
+      "pixel_event": "Purchase",
+      "billing_event": "IMPRESSIONS",
+      "targeting": {
+       "age_min": 18,
+       "age_max": 55,
+       "custom_audiences": [
+        "Petfluencer-Seite 30 Tage"
+       ],
+       "exclude_custom_audiences": [
+        "Käuferinnen 180 Tage"
+       ]
+      },
+      "placements": "advantage_plus",
+      "ads": [
+       {
+        "creative": "K8c_petfluencer_wert",
+        "primary_text": "I",
+        "headline": "Du warst schon auf der Seite",
+        "description": "Workbook · 97 € · sofort im Lernzentrum",
+        "cta": "SHOP_NOW",
+        "url": "/kurs/petfluencer-workbook"
+       },
+       {
+        "creative": "K8b_petfluencer_mythen",
+        "primary_text": "H",
+        "headline": "Mira, Jonas, Steffi – und du?",
+        "description": "19 Module · 36 Vorlagen · 97 €",
+        "cta": "SHOP_NOW",
+        "url": "/kurs/petfluencer-workbook"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "M5",
+    "name": "M5 · Storytelling-Kurs 39 € · warm · DACH",
+    "objective": "OUTCOME_SALES",
+    "buying_type": "AUCTION",
+    "daily_budget_eur": 3,
+    "budget_level": "campaign",
+    "bid_strategy": "LOWEST_COST_WITHOUT_CAP",
+    "special_ad_categories": [],
+    "note": "Storytelling (39 €) ist das Einstiegsprodukt für warme B2B-Besucherinnen; übernimmt ab 01.10. das Budget von M3 (Akademie-Aktion endet 30.09.).",
+    "adsets": [
+     {
+      "id": "M5.1",
+      "name": "Warm: Website + Check · Storytelling",
+      "optimization_goal": "OFFSITE_CONVERSIONS",
+      "pixel_event": "Purchase",
+      "billing_event": "IMPRESSIONS",
+      "targeting": {
+       "age_min": 22,
+       "age_max": 60,
+       "custom_audiences": [
+        "Website 30 Tage",
+        "Check abgeschlossen 90 Tage"
+       ],
+       "exclude_custom_audiences": [
+        "Käuferinnen 180 Tage"
+       ]
+      },
+      "placements": "advantage_plus",
+      "ads": [
+       {
+        "creative": "K9a_storytelling_hook",
+        "primary_text": "J",
+        "headline": "Storytelling in Tierberufen – 39 €",
+        "description": "8 Module · 89 Lektionen · 6 Vorlagen",
+        "cta": "SHOP_NOW",
+        "url": "/kurse/storytelling"
+       },
+       {
+        "creative": "K9b_storytelling_zwei_websites",
+        "primary_text": "J",
+        "headline": "Warum Fakten nicht verkaufen",
+        "description": "Deine Story in 6 Sätzen · 39 €",
+        "cta": "LEARN_MORE",
+        "url": "/kurse/storytelling"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "primary_texts": {
+   "A": "Du kannst alles mit Hunden – nur nicht, wie du es verkaufst?\n\nZu wenige Anfragen. Preise zu niedrig. Kunden kommen einmal und nie wieder. Du kannst nichts dafür – Hundetrainerin wirst du wegen der Hunde, nicht wegen BWL.\n\nDer kostenlose Betriebs-Check zeigt dir in 5 Minuten, ob es an deinem Angebot, deinem Preis, deiner Sichtbarkeit oder deinem Nachfassen liegt. 55 Fragen, alles Multiple Choice, Ergebnis per Mail mit konkreten nächsten Schritten.\n\nKein Abo, keine Kreditkarte, kein Coach-Blabla. Aus 29 Jahren Praxis in der Tierbranche.\n👉 Jetzt Gratis-Check starten",
+   "B": "5 Minuten. 55 Fragen. Danach weißt du, warum dein Tierbusiness nicht so läuft, wie es könnte – und was zuerst dran ist.\n\nKostenlos, ohne Verkaufsgespräch. Für Hundetrainerinnen, Tierphysios, Tierheilpraktikerinnen & alle, die mit Tieren selbständig sind.",
+   "C": "Tierphysio mit Herz – aber zum Monatsende wird gerechnet?\n\nDu bist fachlich stark. Nur hat dir niemand beigebracht, wie man Preise kalkuliert, Empfehlungen systematisch bekommt und gefunden wird. Das ist kein Talent, das ist Handwerk.\n\nDer kostenlose Betriebs-Check zeigt dir in 5 Minuten, wo dein Hebel liegt. 55 Fragen, Ergebnis per Mail, kein Abo.\n👉 Jetzt kostenlos checken",
+   "D": "Du liebst Hunde. Du bist gut mit ihnen. Und irgendwo im Hinterkopf ist die Frage: Könnte ich davon leben?\n\nDie meisten, die diesen Schritt gehen, scheitern nicht an den Hunden – sondern an Preisen, Anfragen, Verträgen, Sichtbarkeit. Weil es ihnen niemand beibringt.\n\nIch habe 13 Jahre eine Hundeschul-Akademie geleitet und über 4.600 Kurse verkauft. Der kostenlose Betriebs-Check zeigt dir in 5 Minuten, wo du stehst – auch wenn du noch nicht gestartet bist.\n👉 Gratis-Check starten",
+   "E": "99 Tipps für 1 €. Kein Tippfehler.\n\nAus 13 Jahren Akademieleitung und 28 Jahren Marketing: 8 Module, 99 Tipps, 99 Sofort-Aktionen für deine Selbständigkeit mit Hunden & Co. Als PDF, sofort nach der Zahlung.\n\nWarum so günstig? Weil ich will, dass du siehst, wie ich arbeite – bevor du irgendetwas anderes kaufst.",
+   "F": "Nur noch bis 30. September: Die Komplett-Akademie für Tierberufe für 497 € statt 630 €.\n\nAlle 8 Kurse – Fundament, Pricing, E-Mail, Empfehlung, Social Media, KI, Recht, Gefunden werden – plus Vorlagen-Vault mit 62 Vorlagen, Skripten und Prompts gratis dazu. Einmal zahlen, kein Abo.\n\nDu warst schon auf der Seite. Der Preis wartet nicht.",
+   "G": "Dein Hund ist der Star deines Feeds – und die Anfragen bleiben trotzdem aus?\n\nDie meisten Petfluencer-Accounts scheitern nicht am Tier. Sie scheitern an drei Dingen: keine Nische, kein System für Content, keine Ahnung, was ein Post wert ist.\n\n„Erfolgreich Petfluencer werden“ ist das Workbook dazu: 19 Module, 40 recherchierte Porträts (20 aus DACH), 150 Content-Ideen, 100 Marken, die mit Petfluencern arbeiten, die 7 Einnahmequellen und 36 Vorlagen – Media-Kit, Preisformel, Vertragsbausteine. Dazu der Rechts- und Steuerrahmen für DE, AT und CH.\n\nKein „Werde reich mit deinem Hund“. Ehrliche Zahlen, ein Tierwohl-Kodex – und ein 90-Tage-Startplan ab null Followern.\n👉 Workbook ansehen – 97 €, sofort im Lernzentrum",
+   "H": "Mira hatte 82 Follower, einen Bürojob und Angst vor der Kamera. Jonas hatte null Follower und einen Tierschutzhund aus Rumänien. Steffi 340 Follower und den Wunsch nach einem zweiten Standbein.\n\nDrei Wege, ein Workbook: „Erfolgreich Petfluencer werden“ begleitet dich von der Nische über die ersten 1.000 Follower bis zum ersten Vertrag – mit 40 Porträts echter Accounts, 150 Content-Ideen, 100 Marken aus DACH und 36 Vorlagen.\n\nUnd in jedem Modul die Frage: Was bedeutet das für dein Tier?\n👉 Für 97 € starten – sofort im Lernzentrum",
+   "I": "Was ist ein Post mit deinem Hund wert? Die meisten wissen es nicht – und nehmen ein Futterpaket als Bezahlung.\n\nIm Petfluencer-Workbook bekommst du die Preisformel, das Media-Kit, den Briefing-Check und die 7 Einnahmequellen – von Kooperation über UGC bis Affiliate. Plus 100 Marken aus DACH, die mit Petfluencern arbeiten, und der Weg, wie du sie ansprichst.\n\n19 Module, 346 Seiten als Kurs, 36 Vorlagen. Für Hund, Katze – und ein eigenes Modul für Kaninchen, Nager, Vögel und Exoten.\n👉 Jetzt für 97 € ansehen",
+   "J": "Niemand bucht dich wegen deiner Zertifikate. Menschen buchen dich, weil sie sich in deiner Geschichte wiedererkennen.\n\nZwei Websites, derselbe Beruf: Eine listet Ausbildungen auf. Die andere erzählt, warum sie diesen Beruf macht. Rate, welche die Anfrage bekommt.\n\n„Storytelling in Tierberufen“: deine Gründungsgeschichte in drei Akten, Kundenstories rechtlich sauber, sechs Storyformate, Story in 30 Sekunden fürs Kurzvideo – und der Preis in der Geschichte statt in der Rechtfertigung. 8 Module, 89 Lektionen, 6 Vorlagen, 25 Hooks, 30 Story-Ideen.\n\nDu warst schon bei uns. 39 €, sofort im Lernzentrum.\n👉 Kurs ansehen"
+  },
+  "creative_formats": {
+   "feed": "_1x1.jpg",
+   "feed_tall": "_4x5.jpg",
+   "story_reels": "_9x16.jpg"
   }
+ },
+ "google": {
+  "customer_id": "6217537833",
+  "login_customer_id": "9999416715",
+  "geo": [
+   "Germany",
+   "Austria",
+   "Switzerland"
+  ],
+  "language": "German",
+  "network": "search_only",
+  "account_negative_keywords": [
+   "kostenlos",
+   "gratis kurs",
+   "tierarzt",
+   "tierarztpraxis",
+   "tiermedizin",
+   "job",
+   "stellenangebot",
+   "ausbildung zum hundetrainer",
+   "hundetrainer ausbildung",
+   "gehalt",
+   "hundeschule in der nähe",
+   "hundetrainer gesucht",
+   "welpenkurs",
+   "hundeschule preise",
+   "tierphysio termin",
+   "studium",
+   "praktikum",
+   "ihk",
+   "umschulung",
+   "tierheim",
+   "ebay",
+   "kleinanzeigen",
+   "agentur",
+   "influencer agentur"
+  ],
+  "conversion_actions": {
+   "primary": "Betriebs-Check abgeschlossen (Lead)",
+   "secondary": "Kurskauf (Purchase, Wert)"
+  },
+  "campaigns": [
+   {
+    "id": "G1",
+    "name": "G1 · Gratis-Check · Suche · DACH",
+    "type": "SEARCH",
+    "daily_budget_eur": 13,
+    "bidding": "MAXIMIZE_CONVERSIONS",
+    "ad_groups": [
+     {
+      "id": "G1.1",
+      "name": "Hundeschule mehr Kunden",
+      "url": "/betriebs-check",
+      "match": "PHRASE",
+      "keywords": [
+       "hundeschule mehr kunden",
+       "hundetrainer kunden gewinnen",
+       "hundeschule marketing",
+       "hundeschule auslastung",
+       "hundetrainer selbständig kunden",
+       "werbung hundeschule",
+       "hundeschule bekannt machen",
+       "hundeschule gründen",
+       "hundetrainer selbstständig machen",
+       "mit hunden selbständig machen"
+      ]
+     },
+     {
+      "id": "G1.2",
+      "name": "Tierphysio Tierheilpraxis",
+      "url": "/betriebs-check",
+      "match": "PHRASE",
+      "keywords": [
+       "tierphysiotherapie kunden gewinnen",
+       "tierheilpraktiker marketing",
+       "tierphysio praxis auslasten",
+       "tierheilpraktiker mehr kunden",
+       "tierphysiotherapeut selbstständig",
+       "tierphysiotherapie praxis eröffnen"
+      ]
+     },
+     {
+      "id": "G1.3",
+      "name": "Tierberuf allgemein",
+      "url": "/betriebs-check",
+      "match": "PHRASE",
+      "keywords": [
+       "tierberuf selbständig",
+       "selbständig mit tieren",
+       "tierbusiness aufbauen",
+       "marketing für tierberufe",
+       "tierberuf mehr umsatz",
+       "selbstständig mit tieren geld verdienen"
+      ]
+     }
+    ],
+    "rsa": {
+     "headlines": [
+      "Mehr Kunden für Hundetrainer",
+      "Gratis-Betriebs-Check (5 Min)",
+      "Woran hakt es wirklich?",
+      "Aus 29 Jahren Tierbranche",
+      "Kein Coach-Blabla",
+      "Preise, Marketing, Kunden",
+      "Für selbständige Tierprofis",
+      "Von Ex-Akademie-Leiter",
+      "55 Fragen, klares Ergebnis",
+      "Endlich planbar verkaufen",
+      "Sofort umsetzbar",
+      "Online-Kurse ab 1 €",
+      "Sofortiger Zugang",
+      "Ergebnis sofort per Mail",
+      "Kein Abo, keine Kreditkarte"
+     ],
+     "headline_overrides": {
+      "G1.2": [
+       "Mehr Kunden für Tierphysios",
+       "Tierheilpraxis auslasten"
+      ],
+      "G1.3": [
+       "Selbständig mit Tieren",
+       "Dein Tierbusiness, planbar"
+      ]
+     },
+     "descriptions": [
+      "Alles mit Tieren – nur nicht verkaufen? Der Gratis-Check zeigt in 5 Min, woran es liegt.",
+      "Pricing, Positionierung, Marketing & KI für Hundetrainer & Tierphysios. Sofort umsetzbar.",
+      "29 Jahre Tierbranche, 4.600+ verkaufte Kurse. Praxiswissen statt Theorie. Kein Abo.",
+      "Kein Abo, keine Kreditkarte: 55 Fragen, Ergebnis per Mail mit konkreten nächsten Schritten"
+     ],
+     "path1": "gratis-check",
+     "path2": "5-minuten"
+    },
+    "sitelinks": [
+     {
+      "text": "Gratis-Check",
+      "url": "/betriebs-check"
+     },
+     {
+      "text": "Alle Kurse",
+      "url": "/kurse"
+     },
+     {
+      "text": "Fundament-Kurs 149 €",
+      "url": "/kurse/fundament"
+     },
+     {
+      "text": "Storytelling-Kurs 39 €",
+      "url": "/kurse/storytelling"
+     }
+    ],
+    "callouts": [
+     "Sofortiger Zugang",
+     "Kein Abo",
+     "DE/AT/CH",
+     "Aus der Praxis",
+     "Sofort starten"
+    ],
+    "structured_snippet": {
+     "header": "Kurse",
+     "values": [
+      "Storytelling",
+      "Pricing",
+      "Social Media",
+      "E-Mail",
+      "Empfehlung",
+      "KI"
+     ]
+    }
+   },
+   {
+    "id": "G3",
+    "name": "G3 · Akademie-Aktion · Suche · bis 30.09.",
+    "type": "SEARCH",
+    "daily_budget_eur": 5,
+    "bidding": "MAXIMIZE_CONVERSION_VALUE",
+    "end_date": "2026-09-30",
+    "ad_groups": [
+     {
+      "id": "G3.1",
+      "name": "Business-Kurs Tierberufe",
+      "url": "/kurse/komplett-akademie",
+      "match": "PHRASE",
+      "keywords": [
+       "online kurs hundetrainer business",
+       "weiterbildung hundetrainer marketing",
+       "fortbildung selbständige tierberufe",
+       "business kurs tierphysio",
+       "hundetrainer business kurs",
+       "marketing kurs hundeschule"
+      ]
+     }
+    ],
+    "rsa": {
+     "headlines": [
+      "Komplett-Akademie Tierberufe",
+      "497 € statt 630 € bis 30.09.",
+      "8 Kurse, 1 Preis",
+      "Vorlagen-Vault gratis dazu",
+      "Sofortiger Zugang",
+      "Pricing bis KI – alles drin",
+      "Aus 29 Jahren Tierbranche",
+      "Für Hundetrainer & Tierphysios",
+      "Kein Abo, einmal zahlen"
+     ],
+     "descriptions": [
+      "Alle 8 Business-Kurse für Tierprofis in einem Paket. Nur bis 30.09.2026 zum Aktionspreis.",
+      "Fundament, Pricing, E-Mail, Empfehlung, Social, KI, Recht, Gefunden werden + 62 Vorlagen.",
+      "Einmal zahlen, kein Abo, alle Updates inklusive. Für DE, AT und CH."
+     ],
+     "path1": "akademie",
+     "path2": "aktion"
+    }
+   },
+   {
+    "id": "G4",
+    "name": "G4 · Marke",
+    "type": "SEARCH",
+    "daily_budget_eur": 2,
+    "bidding": "MAXIMIZE_CLICKS",
+    "cpc_ceiling_eur": 0.6,
+    "ad_groups": [
+     {
+      "id": "G4.1",
+      "name": "Marke",
+      "url": "/",
+      "match": "PHRASE",
+      "keywords": [
+       "schnauze digital",
+       "schnauze.digital",
+       "schnauze digital kurse",
+       "michael lederer hundetrainer"
+      ]
+     }
+    ],
+    "rsa": {
+     "headlines": [
+      "Schnauze.Digital – offiziell",
+      "Online-Kurse für Tierprofis",
+      "Gratis-Betriebs-Check",
+      "Von Michael Lederer",
+      "Pricing, Marketing & KI",
+      "Sofortiger Zugang"
+     ],
+     "descriptions": [
+      "Die offizielle Seite: Online-Kurse für Hundetrainer, Tierphysios & Co. Sofort umsetzbar.",
+      "Starte mit dem kostenlosen 5-Minuten-Check und finde heraus, woran es wirklich hakt."
+     ],
+     "path1": "start"
+    }
+   },
+   {
+    "id": "G5",
+    "name": "G5 · Petfluencer · Suche · DACH",
+    "type": "SEARCH",
+    "daily_budget_eur": 5,
+    "bidding": "MAXIMIZE_CONVERSIONS",
+    "note": "B2C-Suche mit klarer Absicht.",
+    "ad_groups": [
+     {
+      "id": "G5.1",
+      "name": "Petfluencer werden",
+      "url": "/kurs/petfluencer-workbook",
+      "match": "PHRASE",
+      "keywords": [
+       "petfluencer werden",
+       "petfluencer",
+       "dogfluencer werden",
+       "tierfluencer werden",
+       "haustier influencer werden",
+       "hund influencer werden",
+       "hunde influencer werden",
+       "katze influencer werden",
+       "petfluencer verdienst",
+       "wie wird man petfluencer",
+       "petfluencer anleitung",
+       "petfluencer kurs"
+      ]
+     },
+     {
+      "id": "G5.2",
+      "name": "Mit Hund Geld verdienen",
+      "url": "/kurs/petfluencer-workbook",
+      "match": "PHRASE",
+      "keywords": [
+       "mit hund geld verdienen",
+       "mit meinem hund geld verdienen",
+       "mit hund geld verdienen instagram",
+       "hund instagram geld verdienen",
+       "hund instagram account aufbauen",
+       "hund tiktok geld verdienen",
+       "mit katze geld verdienen instagram",
+       "hund als model geld verdienen",
+       "hunde marken kooperation",
+       "hund kooperation instagram"
+      ]
+     }
+    ],
+    "rsa": {
+     "headlines": [
+      "Erfolgreich Petfluencer werden",
+      "Das Workbook · 19 Module",
+      "40 Porträts, 100 Marken DACH",
+      "150 Content-Ideen inklusive",
+      "7 Einnahmequellen erklärt",
+      "Preisformel & Media-Kit",
+      "Recht & Steuern DE/AT/CH",
+      "Ab 0 Followern starten",
+      "Tierwohl vor Reichweite",
+      "Sofort im Lernzentrum",
+      "Einmalig 97 €, kein Abo",
+      "36 Vorlagen zum Kopieren",
+      "Von 0 zum ersten Vertrag"
+     ],
+     "headline_overrides": {
+      "G5.2": [
+       "Mit deinem Hund Geld verdienen",
+       "Was ist dein Post wert?"
+      ]
+     },
+     "descriptions": [
+      "Aus Hund oder Katze eine Marke machen – mit System, ohne dein Tier zu verheizen.",
+      "19 Module, 40 Porträts, 150 Content-Ideen, 100 Marken DACH, 7 Einnahmequellen, 36 Vorlagen",
+      "Kein „Werde reich mit deinem Hund“: ehrliche Zahlen, Preisformel, Media-Kit, Recht.",
+      "Sofort im Lernzentrum, Workbook als PDF dazu. Einmalig 97 €, kein Abo. Für DE, AT und CH."
+     ],
+     "path1": "petfluencer",
+     "path2": "workbook"
+    },
+    "sitelinks": [
+     {
+      "text": "Die 7 Einnahmequellen",
+      "url": "/kurs/petfluencer-workbook"
+     },
+     {
+      "text": "Alle 19 Module",
+      "url": "/kurs/petfluencer-workbook"
+     },
+     {
+      "text": "Blog: Petfluencer werden",
+      "url": "/blog/petfluencer-werden"
+     },
+     {
+      "text": "Alle Kurse",
+      "url": "/kurse"
+     }
+    ],
+    "callouts": [
+     "Einmalig 97 €",
+     "Kein Abo",
+     "DE/AT/CH",
+     "Sofortiger Zugang",
+     "36 Vorlagen"
+    ],
+    "structured_snippet": {
+     "header": "Kurse",
+     "values": [
+      "Nische",
+      "Account-Aufbau",
+      "Content-System",
+      "Kooperationen",
+      "Preise",
+      "Recht & Steuern"
+     ]
+    }
+   }
+  ]
+ },
+ "updated": "2026-09-06",
+ "changelog": [
+  "2.0: Petfluencer-Workbook (B2C, 97 €) als M4 + G5; Storytelling-Kurs (39 €) als M5 warm + Sitelinks; keine Zugriffsdauer-Versprechen mehr; Google-Textlängen korrigiert; Testphasen-Budgets neu verteilt (je Plattform 25 €/Tag)."
+ ]
 }
